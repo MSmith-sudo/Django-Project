@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .home-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+<div class="home-container">
+
+    <div>
+        {% include 'topics_component.html' %}
+        </div>
+    <a href="{% url 'create-room' %}">Create Room</a>
+
+</div>
+
+<div>
+    {% include 'activity_components.html' %}
+</div>
+
+{% endblock content %}
